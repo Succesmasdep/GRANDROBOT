@@ -20,7 +20,7 @@ def afk(bot: Bot, update: Update):
         reason = args[1]
 
     sql.set_afk(update.effective_user.id, reason)
-    update.effective_message.reply_text("{} is now away!".format(update.effective_user.first_name))
+    update.effective_message.reply_text("{} TELAH OFFLINE!".format(update.effective_user.first_name))
 
 
 @run_async
@@ -33,14 +33,15 @@ def no_longer_afk(bot: Bot, update: Update):
     res = sql.rm_afk(user.id)
     if res:
         options = [
-            '{} is here!',
-            '{} is back!',
-            '{} is now in the chat!',
-            '{} is awake!',
-            '{} is back online!',
-            '{} is finally here!',
-            'Welcome back!, {}',
-            'Where is {}?\nIn the chat!'
+                "{} Telah Kembali!",
+                "Ada Yang kangen {}?",
+                "{} sekarang waktunya nimbrung!",
+                "{} disini menantimu:)!",
+                "{} Telah ONLINE!",
+                "{} welcome back {} !",
+                "{} tetap semangat ",
+                "Darimana lu {}?\nAbis apa hayo ?",
+                "Ramein grupnya yuk!",
         ]
         chosen_option = random.choice(options)
         update.effective_message.reply_text(chosen_option.format(update.effective_user.first_name))
@@ -71,9 +72,9 @@ def reply_afk(bot: Bot, update: Update):
                 valid, reason = sql.check_afk_status(user_id)
                 if valid:
                     if not reason:
-                        res = "{} is AFK!".format(fst_name)
+                        res = "{} Sedang OFFLINE!".format(fst_name)
                     else:
-                        res = "{} is AFK!\nReason:\n{}".format(fst_name, reason)
+                        res = "{} Sedang OFFLINE!\nAlasan:\n{}".format(fst_name, reason)
                     message.reply_text(res)
 
 
