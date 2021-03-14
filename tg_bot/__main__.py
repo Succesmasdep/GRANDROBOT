@@ -26,30 +26,36 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 
 PM_START_TEXT = """
-**Hello {}, My Name is {}!** 
-I am an **SUPERB**  group management bot.
-You can find the list of available commands with /help.
-
+**Halo {}, Perkenalkan nama saya {}! 
+Saya adalah robot yang bisa membuatmu jatuh cinta xixi.
+Saya ada untuk menghilangkan kagalauan yang haqiqi.
+Dibuat khusus untuk menyatukan hati dua insan di telegram.
+Saya hanya robot, tapi saya bisa jatuh cinta egegege.
+━─━─━─━─━─━─━─━─━─━─━
+▪**Managed by:** [ᴹᵘᵏˡᵃˢˢˢ ⁪⁬⁮⁮⁮⁮](https://t.me/muklasss90)
+▪**JOIN MY CHANNEL:** [KLIK DISINI](https://t.me/chlenterasajak)
+━─━─━─━─━─━─━─━─━─━─━
+Tekan /help untuk melihat daftar fitur saya.
 """
 
 HELP_STRINGS = """
 
-Hello! my name *{}*.
-
+saya bot pintar, nama ku *{}*.
+Saya adalah manusia robot dengan beberapa kelebihan yang menyenangkan! Silahkan lihat berikut ini untuk beberapa ide dari \
+hal-hal yang bisa saya bantu.
 *Main* commands available:
- - /start: start the bot
- - /help: PM's you this message.
- - /help <module name>: PM's you info about that module.
- - /settings:
-   - in PM: will send you your settings for all supported modules.
-   - in a group: will redirect you to pm, with all that chat's settings.
-
+ • /help: PM adalah Anda pesan ini.
+ • /help <module name>: PM Anda info tentang modul itu.
+ • /donate:informasi tentang cara berdonasi!
+ • /settings:
+   •di PM: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
+   • dalam grup: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.
 
 {}
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-TECHNO_IMG = "https://telegra.ph/file/84b2017bc2f3c90f2e61c.jpg"
+TECHNO_IMG = "https://i.pinimg.com/originals/f9/e4/28/f9e42808c3d81a26dd06508a08bc7e71.jpg"
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
@@ -142,11 +148,11 @@ def start(bot: Bot, update: Update, args: List[str]):
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🤝HELP🤝",
                                                                        callback_data="help_back".format(bot.username)),
                                                                                    InlineKeyboardButton(text="🧑‍💻My Creator🧑‍💻",
-                                                                       url="t.me/teamishere")],
+                                                                       url="https://t.me/muklasss90")],
                                                                                    [InlineKeyboardButton(text="ADD GRAND OFFICIAL TO YOUR GROUP",
                                                                        url="t.me/{}?startgroup=true".format(bot.username)),
-                                                                                   InlineKeyboardButton(text="Source Code",
-                                                                       url="https://github.com/legendx22/GRANDROBOT")
+                                                                                   InlineKeyboardButton(text="My Instagram",
+                                                                       url="https://www.instagram.com/muklaskhoiru_wf")
                                                                                  ]]))
 
     else:
